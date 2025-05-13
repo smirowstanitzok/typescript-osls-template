@@ -1,0 +1,74 @@
+name: Pull Request
+
+on: pull_request
+
+concurrency: conc-pr-${{ github.repository }}
+
+jobs:
+  mrc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Semantic PR Check
+        uses: amannn/action-semantic-pull-request@v5.5.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          # Configure which types are allowed.
+          # Default: https://github.com/commitizen/conventional-commit-types
+          types: |
+            bump
+            ci
+            chore
+            feat
+            fix
+            improvement
+            refactor
+            test
+          requireScope: false
+          validateSingleCommit: true
+      - uses: actions/checkout@v4
+        if: always()
+      - name: Use Node.js
+        if: always()
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+      - name: Install dependencies
+        if: always()
+        run: npm ci
+      - name: Build
+        if: always()
+        run: npm run build
+      - name: Lint
+        if: always()
+        run: npm run lint
+      - name: Lint Tests
+        if: always()
+        run: npm run lint-tests
+      - name: Prettier
+        if: always()
+        run: npm run check-prettier
+
+  test:
+    permissions:
+      contents: read
+      id-token: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+      - name: Install dependencies
+        run: npm ci
+      - name: Deploying to cicd
+        run: npx sls deploy --verbose --stage cicd --force
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Running tests (cicd)
+        run: npm run test

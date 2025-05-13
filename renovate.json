@@ -1,0 +1,48 @@
+{
+  "dependencyDashboard": false,
+  "extends": ["config:base", ":semanticCommitTypeAll(chore)"],
+  "rebaseStalePrs": true,
+  "semanticCommits": "enabled",
+  "packageRules": [
+    {
+      "automerge": true,
+      "automergeType": "pr",
+      "matchDepTypes": ["action", "dependencies", "devDependencies"]
+    },
+    {
+      "allowedVersions": "^20",
+      "automerge": true,
+      "automergeType": "pr",
+      "groupName": "nodetypes",
+      "matchPackageNames": ["@types/node", "actions/node-versions"]
+    },
+    {
+      "automerge": true,
+      "automergeType": "pr",
+      "groupName": "aws-sdk-v3",
+      "matchPackagePatterns": ["^@aws-sdk"],
+      "schedule": ["on the 3rd day instance on Sunday"]
+    },
+    {
+      "allowedVersions": "^3",
+      "automerge": true,
+      "automergeType": "pr",
+      "matchPackageNames": ["serverless"]
+    },
+    {
+      "automerge": true,
+      "automergeType": "pr",
+      "groupName": "types",
+      "matchPackagePatterns": ["@types/"],
+      "schedule": ["after 2am and before 5am"]
+    },
+    {
+      "automerge": true,
+      "automergeType": "pr",
+      "groupName": "tzdata",
+      "matchPackagePatterns": ["^tzdata"],
+      "schedule": ["after 2am and before 5am"]
+    }
+  ],
+  "labels": ["dependencies"]
+}

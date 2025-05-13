@@ -1,0 +1,7 @@
+{
+  "extension": ["ts"],
+  "jobs": 3,
+  "parallel": true,
+  "require": "esbuild-register",
+  "timeout": 90000
+}
