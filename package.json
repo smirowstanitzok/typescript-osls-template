@@ -30,7 +30,7 @@
     "eslint-plugin-chai-expect": "3.1.0",
     "eslint-plugin-mocha": "11.1.0",
     "mocha": "11.5.0",
-    "osls": "3.51.0",
+    "osls": "3.51.1",
     "prettier": "3.5.3",
     "serverless-esbuild": "1.55.0",
     "typescript": "5.8.3",
