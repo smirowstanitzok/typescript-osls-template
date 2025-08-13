@@ -10,7 +10,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Semantic PR Check
-        uses: amannn/action-semantic-pull-request@v5.5.3
+        uses: amannn/action-semantic-pull-request@v6.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
