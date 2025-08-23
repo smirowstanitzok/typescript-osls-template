@@ -23,7 +23,7 @@
     "@typescript-eslint/eslint-plugin": "8.35.1",
     "@typescript-eslint/parser": "8.35.1",
     "@typescript-eslint/rule-tester": "8.35.1",
-    "chai": "5.3.3",
+    "chai": "6.0.1",
     "esbuild": "0.25.5",
     "esbuild-register": "3.6.0",
     "eslint": "9.33.0",
