@@ -16,10 +16,10 @@
   "author": "",
   "devDependencies": {
     "@eslint/js": "9.38.0",
-    "@types/chai": "5.2.2",
+    "@types/chai": "5.2.3",
     "@types/eslint-plugin-mocha": "10.4.0",
     "@types/mocha": "10.0.10",
-    "@types/node": "20.19.22",
+    "@types/node": "20.19.23",
     "@typescript-eslint/eslint-plugin": "8.35.1",
     "@typescript-eslint/parser": "8.35.1",
     "@typescript-eslint/rule-tester": "8.35.1",
