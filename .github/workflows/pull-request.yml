@@ -27,7 +27,7 @@ jobs:
             test
           requireScope: false
           validateSingleCommit: true
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         if: always()
       - name: Use Node.js
         if: always()
@@ -58,7 +58,7 @@ jobs:
     timeout-minutes: 15
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Use Node.js
         uses: actions/setup-node@v6
         with:
