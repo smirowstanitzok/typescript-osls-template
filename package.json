@@ -20,9 +20,9 @@
     "@types/eslint-plugin-mocha": "10.4.0",
     "@types/mocha": "10.0.10",
     "@types/node": "20.19.25",
-    "@typescript-eslint/eslint-plugin": "8.35.1",
-    "@typescript-eslint/parser": "8.35.1",
-    "@typescript-eslint/rule-tester": "8.35.1",
+    "@typescript-eslint/eslint-plugin": "8.48.0",
+    "@typescript-eslint/parser": "8.48.0",
+    "@typescript-eslint/rule-tester": "8.48.0",
     "chai": "6.2.1",
     "esbuild": "0.27.0",
     "esbuild-register": "3.6.0",
@@ -34,6 +34,6 @@
     "prettier": "3.6.2",
     "serverless-esbuild": "1.56.1",
     "typescript": "5.8.3",
-    "typescript-eslint": "8.35.1"
+    "typescript-eslint": "8.48.0"
   }
 }
