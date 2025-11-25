@@ -33,7 +33,7 @@
     "osls": "3.60.0",
     "prettier": "3.6.2",
     "serverless-esbuild": "1.56.1",
-    "typescript": "5.8.3",
+    "typescript": "5.9.3",
     "typescript-eslint": "8.35.1"
   }
 }
