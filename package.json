@@ -28,7 +28,7 @@
     "esbuild-register": "3.6.0",
     "eslint": "10.3.0",
     "eslint-plugin-chai-expect": "4.1.0",
-    "eslint-plugin-mocha": "11.2.0",
+    "eslint-plugin-mocha": "11.3.0",
     "mocha": "11.7.6",
     "osls": "3.71.0",
     "prettier": "3.8.4",
